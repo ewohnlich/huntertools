@@ -14,5 +14,8 @@ urlpatterns = patterns('',
     url(r'^gearitem/', include('gearitem.urls', namespace="gearitem")),
     url(r'^hunter/', include('hunter.urls', namespace="hunter")),
     url(r'^$', views.Home, name='home'),
+    url(r'^changelog/', views.ChangeLog, name='changelog'),
+    url(r'^faq/', views.FAQ, name='faq'),
+    url(r'^about/', views.About, name='about'),
     url(r'^admin/', include(admin.site.urls)),
 )
