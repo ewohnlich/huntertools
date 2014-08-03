@@ -20,11 +20,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '0u50z-(g^=pk535@=go=20y0=2=yx=5g-7h^+^1851zbf)&j8y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+TEMPLATE_DEBUG = False
+if os.name == 'nt':
+  DEBUG = True
+  TEMPLATE_DEBUG = True
 
-TEMPLATE_DEBUG = True
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','.wowhuntertools.com']
 
 
 # Application definition
